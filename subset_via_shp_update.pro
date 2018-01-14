@@ -1,4 +1,4 @@
-;clip the ENVI RS images by Shapefile mask, some codes from network
+;clip the ENVI RS images by Shapefile mask, some codes from network，sometimes failed.
 PRO Subset_via_shp_update
   e = ENVI()
   

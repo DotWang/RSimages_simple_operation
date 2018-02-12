@@ -1,6 +1,7 @@
+;batch writing the filenames into a text
 pro write_in_txt
 
-  input_path = 'C:\…';path of bunch files
+  input_path = 'C:\';path of bunch files
 
   filename = input_path +'\*.tif';extension name of Pending-files
 

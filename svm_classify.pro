@@ -1,12 +1,13 @@
-PRO SVM_classify
 ;Batch process RS images with ENVI SVM Classifier,C-SVC
+PRO SVM_classify
+
   e = ENVI()
 
   COMPILE_OPT idl2
 
-  image_dir='C:\…' ;Manually change the file path
+  image_dir='C:\' ;Manually change the file path
 
-  output_path='C:\…';Manually change the result path
+  output_path='C:\';Manually change the result path
 
   image_files=file_search(image_dir+'\*.tif',count=file_num)  ;Manually change the extension name
 

@@ -17,7 +17,7 @@ PRO svm_classify
 
     print,strname
 
-    image_files[f_n]= strname[n-1]
+    image_files[f_n]=strname[n-1]
 
   endfor
   ;roi file instead of xml

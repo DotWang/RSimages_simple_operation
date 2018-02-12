@@ -1,5 +1,5 @@
 ;Batch process RS images with ENVI SVM Classifier,C-SVC
-PRO SVM_classify
+PRO svm_classify
 
   e = ENVI()
 
@@ -21,12 +21,11 @@ PRO SVM_classify
 
   endfor
 
-  ENVI_RESTORE_rois,'C:\'
+  ENVI_RESTORE_rois,'C:\';roi file instead of xml
 
   roi_ids=ENVI_get_roi_ids(roi_names=roi_names)
   
   for i=0,file_num-1 do begin
-
 
     file = FILEPATH(image_files[i],ROOT_DIR=image_dir)
 

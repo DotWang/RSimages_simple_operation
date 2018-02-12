@@ -5,9 +5,9 @@ PRO svm_classify
 
   COMPILE_OPT idl2
 
-  image_dir='C:\';Manually change the file path
+  image_dir='C:\';manually change the file path
 
-  output_path='C:\';Manually change the result path
+  output_path='C:\';manually change the result path
 
   image_files=file_search(image_dir+'\*.tif',count=file_num)
 
@@ -20,8 +20,8 @@ PRO svm_classify
     image_files[f_n]= strname[n-1]
 
   endfor
-
-  ENVI_RESTORE_rois,'C:\';roi file instead of xml
+  ;roi file instead of xml
+  ENVI_RESTORE_rois,'C:\'
 
   roi_ids=ENVI_get_roi_ids(roi_names=roi_names)
   

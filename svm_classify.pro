@@ -38,7 +38,7 @@ PRO svm_classify
     pos = INDGEN(nb)
 
     out_name = output_path+'\'+file_baseName(image_files[i],'.tif')+'_classify'
-    ;probability,penalty coefficent,RBF
+    ;probability, penalty coefficent, RBF
     thresh=0
     
     penalty=100
@@ -49,7 +49,7 @@ PRO svm_classify
 
       ns = ns, nl = nl,pos=pos,roi_ids=roi_ids,thresh=thresh,$
         
-      penalty=penalty,kernel_type=kernel_type  
+      penalty=penalty,kernel_type=kernel_type
 
   endfor
 

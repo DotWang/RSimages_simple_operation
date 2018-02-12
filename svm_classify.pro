@@ -5,7 +5,7 @@ PRO SVM_classify
 
   COMPILE_OPT idl2
 
-  image_dir='C:\' ;Manually change the file path
+  image_dir='C:\';Manually change the file path
 
   output_path='C:\';Manually change the result path
 

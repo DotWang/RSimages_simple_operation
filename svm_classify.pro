@@ -21,7 +21,7 @@ PRO SVM_classify
 
   endfor
 
-  ENVI_RESTORE_rois,'C:\….roi';ROI that used for classificiation,*.roi instead of *.xml 
+  ENVI_RESTORE_rois,'C:\';ROI that used for classificiation,*.roi instead of *.xml 
 
   roi_ids=ENVI_get_roi_ids(roi_names=roi_names)
   for i=0,file_num-1 do begin

@@ -33,7 +33,7 @@ PRO img2tif_example
      
      IF err THEN e.ReportError, 'Please provide a valid file.', /INFORMATION
      
-     newFile = FILEPATH(thesefiles[f_n]+'.tif',ROOT_DIR=output_path);filename have no change
+     newFile = FILEPATH(thesefiles[f_n]+'.tif',ROOT_DIR=output_path)
      
      e.ExportRaster,raster1 ,newFile, 'TIFF' 
      

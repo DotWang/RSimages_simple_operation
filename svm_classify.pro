@@ -9,19 +9,20 @@ PRO SVM_classify
 
   output_path='C:\';Manually change the result path
 
-  image_files=file_search(image_dir+'\*.tif',count=file_num);Manually change the extension name
+  image_files=file_search(image_dir+'\*.tif',count=file_num)
 
   for f_n=0,file_num-1 do begin
 
     strname = strsplit(image_files[f_n],'\',/extract,count=n)
 
-    print,strname;Comfortable for me when seeing the file names
+    print,strname
 
     image_files[f_n]= strname[n-1]
 
   endfor
-
-  ENVI_RESTORE_rois,'C:\';ROI that used for classificiation,*.roi instead of *.xml 
+  
+  ;ROI that used for classificiation,*.roi instead of *.xml 
+  ENVI_RESTORE_rois,'C:\'
 
   roi_ids=ENVI_get_roi_ids(roi_names=roi_names)
   for i=0,file_num-1 do begin
@@ -36,8 +37,9 @@ PRO SVM_classify
     ENVI_FILE_QUERY, fid, file_type=file_type, nl=nl, ns=ns,dims=dims,nb=nb
     
     pos = INDGEN(nb)
-
-    out_name = output_path+'\'+file_baseName(image_files[i],'.tif')+'_classify';Manually change the extension name,same to previous
+    
+    ;Manually change the extension name,same to previous
+    out_name = output_path+'\'+file_baseName(image_files[i],'.tif')+'_classify'
     
     thresh=0;Probability
     

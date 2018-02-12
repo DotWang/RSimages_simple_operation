@@ -5,11 +5,11 @@ PRO SVM_classify
 
   COMPILE_OPT idl2
 
-  image_dir='C:\' ;Manually change the file path
+  image_dir='C:\';Manually change the file path
 
   output_path='C:\';Manually change the result path
 
-  image_files=file_search(image_dir+'\*.tif',count=file_num)  ;Manually change the extension name
+  image_files=file_search(image_dir+'\*.tif',count=file_num);Manually change the extension name
 
   for f_n=0,file_num-1 do begin
 

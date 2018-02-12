@@ -1,5 +1,5 @@
 ;batch transforming the ENVI hdr file to TIFF file
-PRO img2tif_example
+PRO hdr2tif_example
 
    e = ENVI()
 

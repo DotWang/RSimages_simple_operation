@@ -1,13 +1,13 @@
-;Batch process RS images with ENVI SVM Classifier,C-SVC
+;batch classifying the RS images with ENVI SVM classifier
 PRO svm_classify
 
   e = ENVI()
 
   COMPILE_OPT idl2
 
-  image_dir='C:\';manually change the file path
+  image_dir='C:\';manually change the image path
 
-  output_path='C:\';manually change the result path
+  output_path='C:\';manually change the output path
 
   image_files=file_search(image_dir+'\*.tif',count=file_num)
 
@@ -20,7 +20,7 @@ PRO svm_classify
     image_files[f_n]=strname[n-1]
 
   endfor
-  ;roi file instead of xml
+  ;roi instead of xml
   ENVI_RESTORE_rois,'C:\'
 
   roi_ids=ENVI_get_roi_ids(roi_names=roi_names)
